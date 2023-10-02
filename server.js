@@ -44,5 +44,5 @@ app.use(routes);
 //start the server
 //force:false so our db data is not overwritten with each restart
 sequelize.sync({ force: false }).then(() => {
-  app.listen('0.0.0.0', PORT, () => console.log(`SERVER LISTENING ON PORT ${PORT}`));
+  app.listen(PORT, '0.0.0.0', () => console.log(`SERVER LISTENING ON PORT ${PORT}`));
 });
